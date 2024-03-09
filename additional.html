@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="RT-Sketch: Goal-Conditioned Imitation Learning from Hand-Drawn Sketches">
+  <meta name="keywords" content="Robotic Manipulation">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>RT-Sketch: Additional Results</title>
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-FV4ZJ9PVSV"></script>  
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-FV4ZJ9PVSV');
+  </script>
+
+  <script>
+
+    function updateInteractive() {
+      var task = document.getElementById("interative-menu").value;
+
+      console.log("interactive", task)
+
+      var video = document.getElementById("interactive-video1");
+      video.src = "assets/h3_vids/goal" + task + ".mp4";
+      video.play();
+
+      var video = document.getElementById("interactive-video2");
+      video.src = "assets/h3_vids/sketch" + task + ".mp4";
+      video.play();
+
+    }
+
+    function updateInteractiveSemantic() {
+      var task = document.getElementById("interative-semantic-menu").value;
+
+      console.log("interactive", task)
+
+      var video = document.getElementById("interactive-video-semantic-1");
+      video.src = "assets/h4_vids/" + task + "/semantic.mp4";
+      video.play();
+
+      var video = document.getElementById("interactive-video-semantic-2");
+      video.src = "assets/h4_vids/" + task + "/spatial.mp4";
+      video.play();
+
+    }
+
+
+
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body onload="updateInteractive();">
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-fullhd">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">RT-Sketch: Goal-Conditioned Imitation<br>Learning from Hand-Drawn Sketches</h1>
+          <h3 class="title is-3 publication-title"><font color="#38CE38">Additional Results</font></h3>
+
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a target="_self" href="./index.html"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span>Main Website</span>
+                </a>
+              </span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<hr class="rounded">
+
+<section class="section" id="multimodal">
+  <div class="container is-max-widescreen">
+    <div class="rows">
+      <h2 class="title is-3">Towards Multimodal Goal Specification</h2>
+       <br>
+    </div>
+
+    <div class="rows">
+        <div class="rows is-centered">
+          <div class="columns is-centered has-text-centered">
+            <div class="column"><h3 class="title is-4">Language Alone</h3></div>
+            <div class="column"><h3 class="title is-4">Sketch Alone</h3></div>
+            <div class="column"><h3 class="title is-4">Sketch + Language</h3></div>
+          </div>
+          <div class="columns is-centered has-text-centered">
+            <div class="column"><p>Wrong placement location</p></div>
+            <div class="column"><p>Not upright</p></div>
+            <div class="column"><p>Upright, correctly placed</p></div>
+          </div>
+          <div class="columns is-centered has-text-centered">
+            <video id="Language" autoplay muted loop height="33%" width="33%">
+              <source src="assets/upright_rt1_fail.mp4"
+                      type="video/mp4">
+            </video>
+            <video id="Sketch" autoplay muted loop height="33%" width="33%">
+              <source src="assets/imprecise1.mp4"
+                      type="video/mp4">
+            </video>
+            <video id="Language+Sketch" autoplay muted loop height="33%" width="33%">
+              <source src="assets/sketch_lang_upright.mp4"
+                      type="video/mp4">
+            </video>
+          </div>
+          <div class="columns is-centered has-text-centered">
+            <div class="column"><p>"place the pepsi can upright"</p></div>
+            <div class="column"><p></p></div>
+            <div class="column"><p>"place the pepsi can upright"</p></div>
+          </div>
+        <div class="rows is-centered">
+          <div class="columns is-centered has-text-centered">
+            <div class="column"><p>Wrong placement location</p></div>
+            <div class="column"><p>Correct placement</p></div>
+            <div class="column"><p>Correct placement</p></div>
+          </div>
+          <div class="columns is-centered has-text-centered">
+            <video id="Language" autoplay muted loop height="33%" width="33%">
+              <source src="assets/lang_pick_failure.mp4"
+                      type="video/mp4">
+            </video>
+            <video id="Language" autoplay muted loop height="33%" width="33%">
+              <source src="assets/sketch_pick.mp4"
+                      type="video/mp4">
+            </video>
+            <video id="Language+Sketch" autoplay muted loop height="33%" width="33%">
+              <source src="assets/sketch_lang_pick.mp4"
+                      type="video/mp4">
+            </video>
+          </div>
+          <div class="columns is-centered has-text-centered">
+            <div class="column"><p>"place the orange on the counter"</p></div>
+            <div class="column"><p></p></div>
+            <div class="column"><p>"place the orange on the counter"</p></div>
+          </div>
+    </div>
+    <br>
+    <div class="rows">
+      <p class="content has-text-justified">
+      We are excited by the prospect of multimodal goal specification to help resolve ambiguity from a single modality alone, and provide experiments to demonstrate that sketch-and-language conditioning can be favorable to either modality alone. We train a sketch-and-language conditioned model which uses FiLM along with EfficientNet layers to tokenize both visual input and language at the input.
+
+    Here, we see that while language alone (i.e. "place the can upright") can be ambiguous in terms of spatial placement, and a sketch alone does not encourage reorientation, the joint policy is better able to address the limitations of either modality alone. Similarly, for the Pick Drawer skill, the sketch-conditioned and sketch-and-language-conditioned policies are more precisely able to place the orange on the counter as desired.
+      </p>
+    </div>
+  </div>
+</section>
+
+<hr class="rounded">
+
+
+<section class="section" id="generalization">
+  <div class="container is-max-widescreen">
+
+    <div class="rows">
+      <h2 class="title is-3">Robustness to Sketches Drawn by Different People</h2>
+
+      <p class="content has-text-justified">
+      We evaluate whether RT-Sketch can generalize to sketches drawn by different individuals and handle stylistic variations via 22 human evaluators who provide Likert ratings. Across 30 sketches drawn by 6 different individuals using line sketching (tracing), RT-Sketch achieves high spatial alignment without a significant dropoff in performance between individuals, or compared to our original sketches used in evaluation. We provide the sketches drawn by the 6 different individuals and the corresponding robot execution videos below.
+      </p>
+      <p class="content has-text-centered">
+       <img src="assets/other_user_sketches.png" class="interpolation-image" style="width: 60%; height: auto;"/>
+      </p>
+    </div>
+  </div>
+</section>
+<section class="hero is-light is-small">
+  <div class="hero-body">
+
+    <div class="container is-fullhd">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h3 class="title is-5">Individual 1</h3>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item">
+          <video poster="" autoplay muted loop height="100%">
+            <source src="assets/user_sketch_vids/u1/00000_spatial.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item">
+          <video poster="" autoplay muted loop height="100%">
+            <source src="assets/user_sketch_vids/u1/00002_spatial.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item">
+          <video poster="" autoplay muted loop height="100%">
+            <source src="assets/user_sketch_vids/u1/00004_spatial.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item">
+          <video poster="" autoplay muted loop height="100%">
+            <source src="assets/user_sketch_vids/u1/00006_spatial.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item">
+          <video poster="" autoplay muted loop height="100%">
+            <source src="assets/user_sketch_vids/u1/00008_spatial.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        </div>
+      </div>
+
+
+    </div>
+
+  </div>
+</section>
+
+<section class="hero is-light is-small">
+  <div class="hero-body">
+    <div class="container is-fullhd">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h3 class="title is-5">Individual 2</h3>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item">
+          <video poster="" autoplay muted loop height="100%">
+            <source src="assets/user_sketch_vids/u2/00000_spatial.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item">
+          <video poster="" autoplay muted loop height="100%">
+            <source src="assets/user_sketch_vids/u2/00002_spatial.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item">
+          <video poster="" autoplay muted loop height="100%">
+            <source src="assets/user_sketch_vids/u2/00004_spatial.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item">
+          <video poster="" autoplay muted loop height="100%">
+            <source src="assets/user_sketch_vids/u2/00006_spatial.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item">
+          <video poster="" autoplay muted loop height="100%">
+            <source src="assets/user_sketch_vids/u2/00008_spatial.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="hero is-light is-small">
+  <div class="hero-body">
+    <div class="container is-fullhd">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h3 class="title is-5">Individual 3</h3>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item">
+          <video poster="" autoplay muted loop height="100%">
+            <source src="assets/user_sketch_vids/u3/00000_spatial.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item">
+          <video poster="" autoplay muted loop height="100%">
+            <source src="assets/user_sketch_vids/u3/00002_spatial.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item">
+          <video poster="" autoplay muted loop height="100%">
+            <source src="assets/user_sketch_vids/u3/00004_spatial.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item">
+          <video poster="" autoplay muted loop height="100%">
+            <source src="assets/user_sketch_vids/u3/00006_spatial.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item">
+          <video poster="" autoplay muted loop height="100%">
+            <source src="assets/user_sketch_vids/u3/00008_spatial.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="hero is-light is-small">
+  <div class="hero-body">
+    <div class="container is-fullhd">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h3 class="title is-5">Individual 4</h3>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item">
+          <video poster="" autoplay muted loop height="100%">
+            <source src="assets/user_sketch_vids/u4/00000_spatial.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item">
+          <video poster="" autoplay muted loop height="100%">
+            <source src="assets/user_sketch_vids/u4/00002_spatial.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item">
+          <video poster="" autoplay muted loop height="100%">
+            <source src="assets/user_sketch_vids/u4/00004_spatial.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item">
+          <video poster="" autoplay muted loop height="100%">
+            <source src="assets/user_sketch_vids/u4/00006_spatial.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item">
+          <video poster="" autoplay muted loop height="100%">
+            <source src="assets/user_sketch_vids/u4/00008_spatial.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="hero is-light is-small">
+  <div class="hero-body">
+    <div class="container is-fullhd">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h3 class="title is-5">Individual 5</h3>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item">
+          <video poster="" autoplay muted loop height="100%">
+            <source src="assets/user_sketch_vids/u5/00000_spatial.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item">
+          <video poster="" autoplay muted loop height="100%">
+            <source src="assets/user_sketch_vids/u5/00002_spatial.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item">
+          <video poster="" autoplay muted loop height="100%">
+            <source src="assets/user_sketch_vids/u5/00004_spatial.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item">
+          <video poster="" autoplay muted loop height="100%">
+            <source src="assets/user_sketch_vids/u5/00006_spatial.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item">
+          <video poster="" autoplay muted loop height="100%">
+            <source src="assets/user_sketch_vids/u5/00008_spatial.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="hero is-light is-small">
+  <div class="hero-body">
+    <div class="container is-fullhd">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h3 class="title is-5">Individual 6</h3>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item">
+          <video poster="" autoplay muted loop height="100%">
+            <source src="assets/user_sketch_vids/u6/00000_spatial.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item">
+          <video poster="" autoplay muted loop height="100%">
+            <source src="assets/user_sketch_vids/u6/00002_spatial.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item">
+          <video poster="" autoplay muted loop height="100%">
+            <source src="assets/user_sketch_vids/u6/00004_spatial.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item">
+          <video poster="" autoplay muted loop height="100%">
+            <source src="assets/user_sketch_vids/u6/00006_spatial.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item">
+          <video poster="" autoplay muted loop height="100%">
+            <source src="assets/user_sketch_vids/u6/00008_spatial.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<hr class="rounded">
+
+<section class="section" id="alt_methods">
+  <div class="container is-max-widescreen">
+    <div class="rows">
+      <h2 class="title is-3">Comparison to Alternative Image-to-Sketch Techniques</h2>
+      <p class="content has-text-justified">
+      In this section, we highlight various image-to-sketch generation techniques we experimented with before pursuing our GAN-based approach.
+    <br><br> Recently, two recent works, <a href="https://clipasso.github.io/clipasso/">CLIPasso</a> and <a href="https://clipascene.github.io/CLIPascene/">CLIPascene</a> by Vinker et. al explore methods for automatically generating a sketch from an image. These works pose sketch generation as inferring the parameters of  Bezier curves representing "strokes" in order to produce a generated sketch with maximal CLIP-similarity to a given input image. These methods perform a per-image optimization to generate a plausible sketch, rather than a global batched operation across many images, limiting their scalability. Additionally, they are fundamentally more concerned with producing high-quality, aesthetically pleasing sketches which capture a lot of extraneous details. CLIPasso and CLIPascene produce sketches with many overlapping curves, which capture details about the object surface texture and appearance that are not relevant to performing the required robot tasks. During evaluation, the many overlapping curves also require more effort by a human operator to draw.
+
+      <p class="content has-text-centered">
+       <img src="assets/image2sketch.png" class="interpolation-image" style="width: 100%; height: auto;"/>
+      </p>
+
+    We, on the other hand, care about producing a minimal but reasonable-quality sketch. The second technique we explore is trying the pre-trained <a href="https://mtli.github.io/sketch/">PhotoSketching GAN</a> on internet data of paired images and sketches. However, this model output does not capture object details well, likely due to not having been trained on robot observations, and contains irrelevant sketch details. The vanilla PhotoSketching GAN produces sketches which do not preserve object outlines with high videlity, which makes it hard to visually distinguish between different objects (the sketch of the green chip bag and the white bowl look very similar). Finally, by finetuning this PhotoSketching GAN on our own data, the outputs are much closer to real, hand-drawn human sketches that capture salient object details as minimally as possible.
+      </p>
+    </div>
+  </div>
+</section>
+      </p>
+    </div>
+  </div>
+</section>
+
+<hr class="rounded">
+<section class="section" id="eval_metrics">
+  <div class="container is-max-widescreen">
+    <div class="rows">
+      <h2 class="title is-3">Evaluation Metric Visualizations</h2>
+      <p class="content has-text-justified">
+      In this work, we quantify the spatial precision of policies based on the pixelwise distance between achieved object positions and their desired placements in visual goals. In particular, we manually annotate the most aligned frame from a rollout along with a manually labeled object keypoint for the target object in the achieved vs. goal images, and compute RMSE on this. To determine the most aligned frame, we use an annotation interface in which a human evaluator watches the rollout back and pauses at the timestamp in which the robot achieves alignment, as determined by the evaluator, or the end frame if alignment is not achieved. On this frame, a human evaluator can provide a 2D click to specify the object centroid. While we could have used an object detector to obtain the object keypoints, we manually annotate the keypoints to prevent conflating object detection errors with policy imprecision. Here, we visualize the manual keypoint annotations for 4 separate RT-Sketch trials along with the associated RMSE. 
+      </p>
+      <p class="content has-text-justified">
+       <img src="assets/rmse_visualization.png" class="interpolation-image" style="width: 100%; height: auto;"/>
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="failure">
+  <div class="container is-max-widescreen">
+
+    <div class="rows">
+      <h3 class="title is-4">Excessive Retrying: RT-Goal Image</h3>
+      <p class="content has-text-justified">
+      One frequent failure mode we observe with RT Goal Image is the tendency of this policy to exhibit excessive retrying behavior. We hypothesize that the policy over-attends to pixel-level differences, and as a result repeatedly attempts to manipulate objects that are already reasonably aligned. This failure to terminate can introduce a risk of toppling objects or misaligning the scene, as visualized below. RT-Sketch and RT-1 are far less susceptible, as they appear to learn notions of alignment and termination that are not hypersensitive to pixelwise differences.
+
+     Below, we provide visualizations of policy behavior during evaluation for RT-Goal Image to illustrate the excessive retrying behavior of the trained policy.
+      </p>
+        <div class="rows is-centered">
+          <div class="columns is-centered has-text-centered">
+            <video id="freehand1" autoplay muted loop height="50%" width="50%">
+              <source src="assets/excessive_retry/00000_spatial.mp4"
+                      type="video/mp4">
+            </video>
+            <video id="freehand1" autoplay muted loop height="50%" width="50%">
+              <source src="assets/excessive_retry/00002_spatial.mp4"
+                      type="video/mp4">
+            </video>
+          </div>
+        <div class="rows is-centered">
+          <div class="columns is-centered has-text-centered">
+            <video id="freehand1" autoplay muted loop height="50%" width="50%">
+              <source src="assets/excessive_retry/00013_spatial.mp4"
+                      type="video/mp4">
+            </video>
+            <video id="freehand1" autoplay muted loop height="50%" width="50%">
+              <source src="assets/excessive_retry/00014_spatial.mp4"
+                      type="video/mp4">
+            </video>
+          </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="background-color:#F0F0F0; border-radius: 10px 10px 10px 10px;" id="why_sketches">
+  <div class="container is-max-widescreen" >
+    <div class="rows">
+      <h2 class="title is-3">Why Sketches?</h2>
+      <p class="content has-text-justified">
+      We highlight several motivating examples where sketches can either guide manipulation directly or complement other modalities:
+      </p>
+      <h3 class="title is-4">Setting a Table</h4>
+      <div id='container'>
+       <img src="assets/motivating_example_images/dining_table.jpeg" class="interpolation-image" style="width: 40%; height: auto;"/>
+       <p class="content has-text-justified">
+       We argue that sketches allow for specifying a loose, but useful level of goal specification. For instance, imagine setting up a fancy dinner table. If we were to describe the desired setup on the left in language, we would either end up with a short and underspecified description, such as: “The utensils go around the plate. The cups go next to each other. The forks go next to each other. The plate should have a knife on it.” There are three sets of utensils here, making it difficult to tell how they should be arranged around the plate, and multiple instances of cups, forks, and plates, making the instructions unclear. To effectively disambiguate, a person would need much longer descriptions or incredibly specific instructions like "put the smaller fork 2cm. to the left of the larger one," which is not convenient to have to do for every single item on the table. We argue that sketches provide a modality that specifies “roughly” what the user cares about spatially in a much more effective way.
+       </p>
+      </div>
+       <br>
+      <h3 class="title is-4">Arranging Furniture</h4>
+      <div id='container'>
+       <img src="assets/motivating_example_images/furniture.jpg" class="interpolation-image" style="width: 40%; height: auto;"/>
+       <p class="content has-text-justified">
+       For mobile robots operating in households, arranging furniture is a potential use case which is difficult to accomplish with language instructions alone. Here, a sketch captures the relative placements and orientations of the furniture in a way that would take much longer to describe with language. Still, there are opportunities to combine sketches and language such as through textual annotations, for instance.
+       </p>
+      </div>
+       <br>
+      <h3 class="title is-4">Folding / Assembly</h4>
+      <div id='container'>
+       <img src="assets/motivating_example_images/assembly.png" class="interpolation-image" style="width: 40%; height: auto;"/>
+       <p class="content has-text-justified">
+       Especially for long-horizon tasks such as multi-step folding or assemblies, a sketch can help visually convey what to manipulate in subgoals. Here, the sketch can serve as more of a schematic or diagram of the desired task, rather than just a depiction of the final desired scene.
+       </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column">
+        <div class="content has-text-centered">
+          <p>
+            Website template borrowed from <a href="https://github.com/nerfies/nerfies.github.io">NeRFies</a> and <a href="https://peract.github.io/">PerAct</a> and <a href="https://voxposer.github.io">VoxPoser</a>. 
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+</body>
+</html>
