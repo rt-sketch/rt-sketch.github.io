@@ -4,6 +4,24 @@ body {
   line-height: 25px;
 }
 
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+#container {
+    display: flex;
+    align-items: center;
+}
+
+#container p {
+    margin-left: 1em;
+}
+
 
 .footer .icon-link {
     font-size: 25px;
@@ -192,3 +210,87 @@ body {
   text-align: justify;
 }
 
+.custom-button {
+  background-color: lightgreen; /* Change this to your desired color */
+  border-color: darkgreen; /* Change this to match the background color */
+  color: green; /* Change this to the desired text color */
+  animation: bounce 1s infinite;
+}
+
+.custom-paper {
+  background-color: lightgreen; /* Change this to your desired color */
+  border-color: darkgreen; /* Change this to match the background color */
+  color: green; /* Change this to the desired text color */
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px); /* Adjust this value to change the jump height */
+  }
+}
+
+.custom-button:hover {
+  animation-play-state: paused; /* Pause the animation on hover */
+}
+
+.rows {
+  text-align: center;
+  margin: 20px;
+}
+
+.box-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap; /* Allows the boxes to wrap to the next line if the screen is too small */
+}
+
+.box {
+  background-color: #ececec;
+  border-radius: 15px;
+  padding: 20px;
+  margin: 10px;
+  flex: 1; /* Distribute available space evenly */
+  max-width: 300px; /* Optional: Set a max width for each box */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
+  text-align: center; /* Center the text */
+}
+
+.box p {
+  font-size: 16px; /* Set the font size for <p> elements inside .box */
+  line-height: 1.2;
+}
+
+.pow-icon {
+  color: #38CE38; /* Customize icon color */
+  margin-right: 5px; /* Optional: Add some space to the left of the icon */
+}
+
+        .gif-row {
+            display: flex;
+            justify-content: center;
+            align-items: center; /* Aligns items vertically in the center */
+            gap: 20px; /* Space between items */
+        }
+        .gif-container {
+            border: 2px solid lightgray; /* Lighter gray border */
+            padding: 0; /* No padding to ensure border is flush with the image */
+            width: 550px; /* Set the width for the images */
+            height: auto; /* Maintain aspect ratio */
+            border-radius: 10px; /* Rounded corners */
+            overflow: hidden; /* Ensure rounded corners clip the image */
+            box-sizing: border-box; /* Include padding and border in element's total width and height */
+        }
+        .gif-container img {
+            display: block; /* Remove the space below the image */
+            width: 100%;
+            height: auto; /* Maintain aspect ratio */
+        }
+
+        .underline {
+            display: inline-block; /* Ensures padding is respected */
+            border-bottom: 2px solid black; /* Change the thickness and color as needed */
+            padding-bottom: 2px; /* Adjust the space between text and underline */
+        }
